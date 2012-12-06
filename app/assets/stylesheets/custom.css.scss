@@ -252,6 +252,14 @@ aside {
 }
 
 /* faqs */
+.faqs {
+  list-style: none;
+}
+
+.contentfaq {
+  background-color: #e9e9e9;
+  padding: 10px
+}
 
 .title {
   text-align: left;
@@ -260,7 +268,11 @@ aside {
   margin-top: 30px;
 }
 
-.contentfaq{
+.newsfeeds{
+  list-style: none;
+}
+
+.contentnewsfeed{
   background-color: #e9e9e9;
   padding: 10px
 }

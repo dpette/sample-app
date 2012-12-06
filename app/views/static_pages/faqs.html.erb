@@ -2,4 +2,6 @@
 
 <h1><%= yield(:title) %></h1>
 
-<%= render partial: 'faq', collection: @faqs %>
+<ul class="faqs">
+  <%= render partial: 'faq', collection: @faqs %>
+</ul>

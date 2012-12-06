@@ -1,0 +1,7 @@
+<% if(@saved)%>
+  $("#newsfeeds").prepend("<%= escape_javascript(render(partial: 'newsfeed', collection: [@newsfeed]))%>")
+  $("#newsfeed_content").val("")
+  $("#newsfeed_title").val("")
+<% else %>
+  $("#errors").html("<%= escape_javascript(render('shared/error_messages', object: @newsfeed))%>")
+<% end%>
