@@ -1,5 +1,6 @@
 class Micropost < ActiveRecord::Base
   attr_accessible :content
+  # Tell me that Micropost belongs to User 
   belongs_to :user
 
   validates :user_id, presence: true
