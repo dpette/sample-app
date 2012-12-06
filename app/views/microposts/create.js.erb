@@ -1,0 +1,7 @@
+<% if(@saved)%>
+  $("#feeds").prepend("<%= escape_javascript(render(partial: 'shared/feed_item', locals: {feed_item: @micropost}))%>")
+  $("#num_microposts").html("<%= escape_javascript(pluralize(current_user.microposts.count, 'micropost'))%>")
+  $("#micropost_content").val("")
+<% else %>
+  $("#errors").html("<%= escape_javascript(render('shared/error_messages', object: @micropost))%>")
+<% end%>

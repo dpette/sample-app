@@ -1,0 +1,3 @@
+$("#<%="#{@id}"%>").remove()
+$("#num_microposts").html("<%= escape_javascript(pluralize(current_user.microposts.count, 'micropost'))%>")
+$("#microposts_count").html("Microposts (<%= current_user.microposts.count %>)")
