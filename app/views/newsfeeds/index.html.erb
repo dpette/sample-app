@@ -1,7 +1,9 @@
 <% provide(:title, "News")%>
 <h1>News</h1>
 <div class="row">
+  <% if current_user.admin?%>
   <%= render 'form' %>
+  <% end %>
   <ul id="newsfeeds" class="newsfeeds">
     <%= render partial: 'newsfeed', collection: @newsfeeds %>
   </ul>

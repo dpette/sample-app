@@ -1,4 +1,6 @@
 class NewsfeedsController < ApplicationController
+  before_filter :admin_user, only: [:destroy, :create]
+  
   # GET /news
   # GET /news.json
   def index
@@ -55,4 +57,9 @@ class NewsfeedsController < ApplicationController
       format.js 
     end
   end
+  
+  private
+    def admin_user
+      current_user.admin?
+    end
 end
